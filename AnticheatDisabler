@@ -1,0 +1,10 @@
+    local entity = game.Players.LocalPlayer
+    local character = entity.Character    
+entity.character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Dead, true)
+        entity.character.Humanoid:ChangeState(Enum.HumanoidStateType.Dead)
+        repeat task.wait() until entity.character.Humanoid.MoveDirection ~= Vector3.zero
+        task.wait(0.2)
+        entity.character.Humanoid:SetStateEnabled(Enum.HumanoidStateType.Dead, false)
+        entity.character.Humanoid:ChangeState(Enum.HumanoidStateType.Running)
+        workspace.Gravity = 192.6
+    end
